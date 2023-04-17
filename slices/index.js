@@ -2,13 +2,16 @@
 
 import HeroSlice from './HeroSlice';
 import ImageGrid from './ImageGrid';
+import SingleMediaHighlights from './SingleMediaHighlights';
 
 export {
 	HeroSlice,
 	ImageGrid,
+	SingleMediaHighlights,
 };
 
 export const components = {
 	hero_slice: HeroSlice,
 	image_grid: ImageGrid,
+	single_media_highlights: SingleMediaHighlights,
 };

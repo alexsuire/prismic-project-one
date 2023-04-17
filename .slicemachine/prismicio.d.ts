@@ -9,7 +9,7 @@ type Simplify<T> = {
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
-     * Title field in *Homepage*
+     * SEO Title field in *Homepage*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -19,6 +19,17 @@ interface HomepageDocumentData {
      *
      */
     title: prismicT.KeyTextField;
+    /**
+     * SEO Description field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.seo_description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Homepage*
      *
@@ -237,11 +248,155 @@ type ImageGridSliceVariation = ImageGridSliceDefault;
  *
  */
 export type ImageGridSlice = prismicT.SharedSlice<"image_grid", ImageGridSliceVariation>;
+/**
+ * Primary content in SingleMediaHighlights → Primary
+ *
+ */
+interface SingleMediaHighlightsSliceDefaultPrimary {
+    /**
+     * Title field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: single_media_highlights.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: single_media_highlights.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Link field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * Theme field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.theme
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    theme: prismicT.SelectField<"Brown" | "Grey" | "Dark" | "Blue" | "Pink" | "Light">;
+}
+/**
+ * Default variation for SingleMediaHighlights Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SingleMediaHighlights`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SingleMediaHighlightsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SingleMediaHighlightsSliceDefaultPrimary>, never>;
+/**
+ * Primary content in SingleMediaHighlights → Primary
+ *
+ */
+interface SingleMediaHighlightsSliceFullWidthImagePrimary {
+    /**
+     * Title field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: single_media_highlights.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: single_media_highlights.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Theme field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.theme
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    theme: prismicT.SelectField<"Brown" | "Grey" | "Dark" | "Blue" | "Pink" | "Light">;
+    /**
+     * Image field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Link field in *SingleMediaHighlights → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: single_media_highlights.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Full Width Image variation for SingleMediaHighlights Slice
+ *
+ * - **API ID**: `fullWidthImage`
+ * - **Description**: `SingleMediaHighlights`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SingleMediaHighlightsSliceFullWidthImage = prismicT.SharedSliceVariation<"fullWidthImage", Simplify<SingleMediaHighlightsSliceFullWidthImagePrimary>, never>;
+/**
+ * Slice variation for *SingleMediaHighlights*
+ *
+ */
+type SingleMediaHighlightsSliceVariation = SingleMediaHighlightsSliceDefault | SingleMediaHighlightsSliceFullWidthImage;
+/**
+ * SingleMediaHighlights Shared Slice
+ *
+ * - **API ID**: `single_media_highlights`
+ * - **Description**: `SingleMediaHighlights`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SingleMediaHighlightsSlice = prismicT.SharedSlice<"single_media_highlights", SingleMediaHighlightsSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageGridSliceDefaultPrimary, ImageGridSliceDefaultItem, ImageGridSliceDefault, ImageGridSliceVariation, ImageGridSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageGridSliceDefaultPrimary, ImageGridSliceDefaultItem, ImageGridSliceDefault, ImageGridSliceVariation, ImageGridSlice, SingleMediaHighlightsSliceDefaultPrimary, SingleMediaHighlightsSliceDefault, SingleMediaHighlightsSliceFullWidthImagePrimary, SingleMediaHighlightsSliceFullWidthImage, SingleMediaHighlightsSliceVariation, SingleMediaHighlightsSlice };
     }
 }

@@ -8,7 +8,14 @@
       "title": {
         "type": "Text",
         "config": {
-          "label": "Title",
+          "label": "SEO Title",
+          "placeholder": ""
+        }
+      },
+      "seo_description": {
+        "type": "Text",
+        "config": {
+          "label": "SEO Description",
           "placeholder": ""
         }
       },

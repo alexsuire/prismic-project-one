@@ -5,6 +5,11 @@
   },
   "slices": {
     "HeroSlice": {},
-    "ImageGrid": {}
+    "ImageGrid": {},
+    "SingleMediaHighlights": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
