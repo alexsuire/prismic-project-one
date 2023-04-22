@@ -1,12 +1,22 @@
 {
   "_cts": {
     "homepage": {},
-    "page": {}
+    "page": {},
+    "navigation": {}
   },
   "slices": {
-    "HeroSlice": {},
+    "HeroSlice": {
+      "default": {
+        "primary": {}
+      }
+    },
     "ImageGrid": {},
     "SingleMediaHighlights": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "NavigationItem": {
       "default": {
         "primary": {}
       }

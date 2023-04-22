@@ -1,19 +1,19 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "greatly",
+    "value": "nearly",
     "type": "Text"
   },
   "seo_description": {
     "__TYPE__": "FieldContent",
-    "value": "grow",
+    "value": "cell",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero_slice$017a610e-77a4-4d69-847e-2803ead79cf1",
+        "key": "hero_slice$50d17c54-c56a-4ab7-a91d-dee567b30844",
         "name": "hero_slice",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -25,7 +25,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Frozen"
+                    "text": "Cabin"
                   }
                 }
               ]
@@ -36,7 +36,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Incididunt amet in consequat ullamco. Tempor nisi eu sunt commodo aliqua ullamco ut non aliqua ut. Dolore ut est reprehenderit non exercitation aliqua quis quis veniam dolor nostrud qui non do enim."
+                    "text": "Ex deserunt sunt quis sint Lorem duis eiusmod occaecat ex fugiat voluptate dolor."
                   }
                 }
               ]
@@ -45,13 +45,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-                "width": 3500,
-                "height": 2338
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+                "width": 4480,
+                "height": 4480
               },
-              "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-              "width": 3500,
-              "height": 2338,
+              "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+              "width": 4480,
+              "height": 4480,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -73,7 +73,7 @@
                     "__TYPE__": "LinkContent",
                     "value": {
                       "__TYPE__": "ExternalLink",
-                      "url": "https://slicemachine.dev"
+                      "url": "https://prismic.io"
                     }
                   }
                 ],
@@ -81,7 +81,7 @@
                   "cta_text",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "build",
+                    "value": "easy",
                     "type": "Text"
                   }
                 ]
@@ -91,7 +91,7 @@
         }
       },
       {
-        "key": "image_grid$0c8c15f7-71dd-43ac-8320-bc579e5a80eb",
+        "key": "image_grid$d906582c-568f-43c7-afd1-f0dd8dc7ddf5",
         "name": "image_grid",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -103,7 +103,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Quite"
+                    "text": "Student"
                   }
                 }
               ]
@@ -114,7 +114,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Eu cillum dolor cillum magna ipsum."
+                    "text": "Labore reprehenderit fugiat mollit fugiat sit aute culpa Lorem Lorem culpa est fugiat."
                   }
                 }
               ]
@@ -130,13 +130,13 @@
                     "__TYPE__": "ImageContent",
                     "origin": {
                       "id": "main",
-                      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
-                      "width": 3168,
-                      "height": 4752
+                      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                      "width": 4024,
+                      "height": 4024
                     },
-                    "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
-                    "width": 3168,
-                    "height": 4752,
+                    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                    "width": 4024,
+                    "height": 4024,
                     "edit": {
                       "zoom": 1,
                       "crop": {
@@ -149,6 +149,77 @@
                   }
                 ]
               ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "single_media_highlights$d2de894d-fc5d-40c3-9cc4-12beb76430fd",
+        "name": "single_media_highlights",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Hidden"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Est non occaecat eu aute consequat incididunt enim proident et quis nostrud. Labore ipsum minim ex magna."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+                "width": 4000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+              "width": 4000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "theme": {
+              "__TYPE__": "FieldContent",
+              "value": "Grey",
+              "type": "Select"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
             }
           ]
         }

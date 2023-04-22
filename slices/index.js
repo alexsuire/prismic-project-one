@@ -2,16 +2,19 @@
 
 import HeroSlice from './HeroSlice';
 import ImageGrid from './ImageGrid';
+import NavigationItem from './NavigationItem';
 import SingleMediaHighlights from './SingleMediaHighlights';
 
 export {
 	HeroSlice,
 	ImageGrid,
+	NavigationItem,
 	SingleMediaHighlights,
 };
 
 export const components = {
 	hero_slice: HeroSlice,
 	image_grid: ImageGrid,
+	navigation_item: NavigationItem,
 	single_media_highlights: SingleMediaHighlights,
 };

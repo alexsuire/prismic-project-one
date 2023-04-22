@@ -1,8 +1,7 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
-import RichText from '@/components/RichText'
-
+import React from "react";
+import { PrismicImage, PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
+import RichText from "@/components/RichText";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
@@ -11,29 +10,26 @@ import RichText from '@/components/RichText'
  */
 const HeroSlice = ({ slice }) => (
   <section>
-      {/* <pre>{JSON.stringify(slice, null, 2)}</pre> */}
-      <PrismicNextImage
-       field={slice.primary.image}
-       className="object-cover"
-       fill
-       />
 
-  <div className='absolute bottom-1/3 px-10'>
-    <RichText
-    field={slice.primary.title}
-    className='text-red-800 font-bold uppercase text-4x1'
-    />
 
-    <RichText
-    field={slice.primary.description}
-    className='mt-2 text-1g font-semibold uppercase text-white'
-    />
+    <div className="flex-row justify-center mt-10">
+      <RichText
+        field={slice.primary.title}
+        className="font-audiowide text-black font-bold uppercase text-8xl mb-8 text-center"
+      />
 
-  </div>
-    
-   
+      <RichText
+        field={slice.primary.description}
+        className="font-audiowide text-black font-light text-2xl text-center"
+      />
+    </div>
+
+    <div className="flex flex-col justify-center items-center
+    mt-10">
+      <PrismicNextImage field={slice?.primary?.image} />
+    </div>
 
   </section>
-)
+);
 
-export default HeroSlice
+export default HeroSlice;
